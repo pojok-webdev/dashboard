@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+        <link rel="stylesheet" href="./bower_components/angular-material/angular-material.min.css" />
+        <script src="./bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="./bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="./bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="./bower_components/angular-route/angular-route.min.js"></script>
+        <script src="./bower_components/angular-material/angular-material.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+  <body ng-app="PadiDashboardMain">
+    <div ng-controller="AppCtrl" layout="column" style="height: 500px;" ng-cloak>
+      <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left" md-component-id="left"
+                    md-disable-backdrop md-whiteframe="4">
+          <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools" ng-click="toggleLeft()">PadiNET Dashboard</h1>
+          </md-toolbar>
+          <md-list ng-cloak>
+            <md-list-item ng-click="showpage('bts')">
+                <p> BTS </p>
+            </md-list-item>
+            <md-list-item ng-click="showpage('tickets')">
+                <p> <a href="#!/tickets">Ticket</a> </p>
+            </md-list-item>
+            <md-list-item ng-click="showpage('surveys')">
+                <p> <a href="#!/surveys">Survey</a> </p>
+            </md-list-item>
+            <md-list-item ng-click="showpage('installs')">
+                <p> <a href="#!/installs">Instalasi</a> </p>
+            </md-list-item>
+            <md-list-item ng-click="showpage('troubleshoots')">
+              <p> <a href="#!/troubleshoots">Troubleshoot</a> </p>
+            </md-list-item>
+            <md-list-item ng-click="showpage('sales')">
+              <p> <a href="#!/sales">Sales</a> </p>
+            </md-list-item>
+            <md-divider></md-divider>
+          </md-list>
+          <md-content layout-margin>
+            <md-button ng-click="toggleLeft()" class="md-accent">
+              Tutup Menu
+            </md-button>
+          </md-content>
+        </md-sidenav>
+        <md-content flex layout-padding>
+          <div layout="column" layout-align="top center">
+            <div>
+              <md-button ng-click="toggleLeft()" class="md-raised">
+                Menu
+              </md-button>
+            </div>
+            <ng-view></ng-view>
+          </div>
+        </md-content>
+      </section>
+    </div>
+  </body>
+</html>

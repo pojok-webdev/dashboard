@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="../css/test.css" />
+<div ng-controller="ListCtrl">
+  <md-list ng-repeat="sale in sales" ng-cloak="" class="listdemoListControls" ng-app="MyApp">
+    <md-subheader class="md-no-sticky md-display-4">{{ sale.name }}</md-subheader>
+      <md-list-item ng-repeat="cat in sale.cats" ng-click="doAction()">
+        <p class="md-primary"> {{ cat.name }} </p>
+        <p class="md-secondary"> {{ cat.val }} </p>
+      </md-list-item>
+      <md-divider></md-divider>
+  </md-list>
+  <md-list>
+    <md-list-item ng-click="doSecondaryAction($event)">
+      <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+      <md-button class="md-secondary">Reload</md-button>
+    </md-list-item>
+  </md-list>
+</div>

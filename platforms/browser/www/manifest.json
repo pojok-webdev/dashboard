@@ -1,0 +1,17 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "padiDashboard",
+  "short_name": "padiDashboard",
+  "version": "io.cordova.hellocordova",
+  "description": "Dashboard for PadiApp.",
+  "author": "Apache Cordova Team",
+  "icons": [
+    {
+      "src": "www/img/logo_nontext.png",
+      "type": "image/png",
+      "sizes": "57x57"
+    }
+  ],
+  "start_url": "index.html"
+}
