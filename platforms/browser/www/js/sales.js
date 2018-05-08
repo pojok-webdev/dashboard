@@ -1,6 +1,6 @@
 app.controller('SalesCtrl', function($http,$scope,appconfig) {
   var imagePath = 'img/logo_nontext.png';
-  var dummysales = [
+  var sampledummysales = [
     { name: 'Amir', val: 0 },
     { name: 'Dwi', val: 0 },
     { name: 'Yudhi', val: 0 },
@@ -8,7 +8,8 @@ app.controller('SalesCtrl', function($http,$scope,appconfig) {
     { name: 'Aris', val: 0 },
     { name: 'Ayu', val: 0 },
     { name: 'Eka', val: 0 }
-  ];
+  ],
+  dummysales = [];
   console.log("SERVER",appconfig.SERVER,"PORT",appconfig.PORT);
   loadData = function(_url,callback){
     var _scope;

@@ -10,13 +10,14 @@ app.config(['$routeProvider','$locationProvider',function($routeProvider,$locati
     .when("/troubleshoots",{templateUrl:"pages/troubleshoots.html"})
     .when("/bts",{templateUrl:"pages/bts.html"})
     .when("/surveys",{templateUrl:"pages/surveys.html"})
-    .when("/test",{templateUrl:"pages/test.html"});
+    .when("/test",{templateUrl:"pages/test.html"})
+    .when("/appsettings",{templateUrl:"pages/appsettings.html"});
 }]);
 app.config(['$httpProvider', function($httpProvider) {
-  
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
+app.constant('appconfig',{'SERVER':'192.168.0.117','PORT':'1945'});
 app.controller("AppCtrl", function ($scope, $route, $routeParams, $location, $mdSidenav,$window) {
     $scope.$route = $route;
     $scope.$location = $location;
