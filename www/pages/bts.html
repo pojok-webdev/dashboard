@@ -2,12 +2,12 @@
 <div ng-cloak ng-controller="BtsCtrl">
   <md-content>
     <md-tabs md-dynamic-height md-border-bottom>
-      <md-tab label="hari">
+      <md-tab label="lokasi">
         <md-content class="md-padding">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-              <md-list-item ng-repeat="cat in daily" ng-click="doAction()">
-                <p class="md-primary"> {{ cat.name }} </p>
-                <p class="md-secondary"> {{ cat.val }} </p>
+              <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
+                <p class="md-primary"> {{ cat.bts }} </p>
+                <p class="md-secondary"> {{ cat.location }} </p>
               </md-list-item>
               <md-divider></md-divider>
           </md-list>
@@ -20,12 +20,12 @@
 
         </md-content>
       </md-tab>
-      <md-tab label="pekan">
+      <md-tab label="cabang">
         <md-content class="md-padding">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in weekly" ng-click="doAction()">
-              <p class="md-primary"> {{ cat.name }} </p>
-              <p class="md-secondary"> {{ cat.val }} </p>
+            <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
+              <p class="md-primary"> {{ cat.bts }} </p>
+              <p class="md-secondary"> {{ cat.branch }} </p>
             </md-list-item>
             <md-divider></md-divider>
         </md-list>
@@ -37,12 +37,12 @@
         </md-list>
       </md-content>
       </md-tab>
-      <md-tab label="bulan">
+      <md-tab label="PTP Wireless">
         <md-content class="md-padding">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in monthly" ng-click="doAction()">
+            <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
               <p class="md-primary"> {{ cat.name }} </p>
-              <p class="md-secondary"> {{ cat.val }} </p>
+              <p class="md-secondary"> {{ cat.apcount }} </p>
             </md-list-item>
             <md-divider></md-divider>
         </md-list>
@@ -54,12 +54,12 @@
         </md-list>
       </md-content>
       </md-tab>
-      <md-tab label="quarter">
+      <md-tab label="Jumlah AP">
         <md-content class="md-padding">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in quarterly" ng-click="doAction()">
-              <p class="md-primary"> {{ cat.name }} </p>
-              <p class="md-secondary"> {{ cat.val }} </p>
+            <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
+              <p class="md-primary"> {{ cat.bts }} </p>
+              <p class="md-secondary"> {{ cat.apcount }} </p>
             </md-list-item>
             <md-divider></md-divider>
         </md-list>
@@ -71,12 +71,12 @@
         </md-list>
       </md-content>
       </md-tab>
-      <md-tab label="tahun">
+      <md-tab label="Jumlah Pelanggan">
         <md-content class="md-padding">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in yearly" ng-click="doAction()">
-              <p class="md-primary"> {{ cat.name }} </p>
-              <p class="md-secondary"> {{ cat.val }} </p>
+            <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
+              <p class="md-primary"> {{ cat.bts }} </p>
+              <p class="md-secondary"> {{ cat.apcount }} </p>
             </md-list-item>
             <md-divider></md-divider>
         </md-list>
