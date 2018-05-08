@@ -15,6 +15,7 @@
         <script src="js/surveys.js"></script>
         <script src="js/bts.js"></script>
         <script src="js/troubleshoots.js"></script>
+        <script src="js/appsettings.js"></script>
         <script src="js/test.js"></script>
     </head>
     <body ng-app="PadiDashboardMain" ng-csp="no-unsafe-eval">
@@ -45,6 +46,9 @@
                 <p> Sales </p>
               </md-list-item>
               <md-divider></md-divider>
+              <md-list-item ng-click="showpage('appsettings');toggleLeft()">
+                <p> Settings </p>
+              </md-list-item>
             </md-list>
             <md-content layout-margin>
               <md-button ng-click="toggleLeft()" class="md-accent">

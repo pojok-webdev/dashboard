@@ -1,4 +1,4 @@
-app.controller('SalesCtrl', function($http,$scope) {
+app.controller('SalesCtrl', function($http,$scope,appconfig) {
   var imagePath = 'img/logo_nontext.png';
   var dummysales = [
     { name: 'Amir', val: 0 },
@@ -9,6 +9,7 @@ app.controller('SalesCtrl', function($http,$scope) {
     { name: 'Ayu', val: 0 },
     { name: 'Eka', val: 0 }
   ];
+  console.log("SERVER",appconfig.SERVER,"PORT",appconfig.PORT);
   loadData = function(_url,callback){
     var _scope;
     $http({
@@ -24,16 +25,17 @@ app.controller('SalesCtrl', function($http,$scope) {
     })
   }
   loadAllData = function(){
-    loadData('http://192.168.0.14:1945/visits',function(out){
+    var _SERVER = appconfig.SERVER+':'+appconfig.PORT;
+    loadData('http://'+_SERVER+'/visits',function(out){
       $scope.visits = out;
     });
-    loadData('http://192.168.0.14:1945/offers',function(out){
+    loadData('http://'+_SERVER+'/offers',function(out){
       $scope.offers = out;
     });
-    loadData('http://192.168.0.14:1945/newfbs',function(out){
+    loadData('http://'+_SERVER+'/newfbs',function(out){
       $scope.newfbs = out;
     });
-    loadData('http://192.168.0.14:1945/sellings',function(out){
+    loadData('http://'+_SERVER+'/sellings',function(out){
       $scope.sellings = out;
     });  
   }

@@ -30,7 +30,13 @@
   .tabsdemoDynamicHeight md-content h1:first-child {
     margin-top: 0; }
 
+.inputdemoErrors .inputErrorsApp {
+  min-height: 48px; }
 
+.inputdemoErrors md-input-container > p {
+  font-size: 0.8em;
+  text-align: left;
+  width: 100%; }
   
   /*
   Copyright 2016 Google Inc. All Rights Reserved. 
