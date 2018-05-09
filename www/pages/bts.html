@@ -12,12 +12,11 @@
               <md-divider></md-divider>
           </md-list>
           <md-list>
-            <md-list-item ng-click="doSecondaryAction($event)">
-              <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+            <md-list-item ng-style="widebuttonstyle" ng-click="doSecondaryAction($event)">
+              <p></p>
               <md-button class="md-secondary">Reload</md-button>
             </md-list-item>
           </md-list>
-
         </md-content>
       </md-tab>
       <md-tab label="cabang">
@@ -30,8 +29,8 @@
             <md-divider></md-divider>
         </md-list>
         <md-list>
-          <md-list-item ng-click="doSecondaryAction($event)">
-            <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+          <md-list-item ng-style="widebuttonstyle" ng-click="doSecondaryAction($event)">
+            <p></p>
             <md-button class="md-secondary">Reload</md-button>
           </md-list-item>
         </md-list>
@@ -41,14 +40,14 @@
         <md-content class="md-padding" md-swipe-right="swipeTab(1)" md-swipe-left="swipeTab(3)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
-              <p class="md-primary"> {{ cat.name }} </p>
+              <p class="md-primary"> {{ cat.bts }} </p>
               <p class="md-secondary"> {{ cat.apcount }} </p>
             </md-list-item>
             <md-divider></md-divider>
         </md-list>
         <md-list>
-          <md-list-item ng-click="doSecondaryAction($event)">
-            <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+          <md-list-item ng-style="widebuttonstyle" ng-click="doSecondaryAction($event)">
+            <p></p>
             <md-button class="md-secondary">Reload</md-button>
           </md-list-item>
         </md-list>
@@ -64,8 +63,8 @@
             <md-divider></md-divider>
         </md-list>
         <md-list>
-          <md-list-item ng-click="doSecondaryAction($event)">
-            <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+          <md-list-item ng-style="widebuttonstyle" ng-click="doSecondaryAction($event)">
+            <p></p>
             <md-button class="md-secondary">Reload</md-button>
           </md-list-item>
         </md-list>
@@ -81,8 +80,8 @@
             <md-divider></md-divider>
         </md-list>
         <md-list>
-          <md-list-item ng-click="doSecondaryAction($event)">
-            <p>Click anywhere to fire the primary action, or the button to fire the secondary</p>
+          <md-list-item ng-style="widebuttonstyle" ng-click="doSecondaryAction($event)">
+            <p></p>
             <md-button class="md-secondary">Reload</md-button>
           </md-list-item>
         </md-list>
@@ -91,4 +90,3 @@
     </md-tabs>
   </md-content>
 </div>
-

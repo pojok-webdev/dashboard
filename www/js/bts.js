@@ -1,6 +1,9 @@
 app.controller('BtsCtrl', function($http,$scope,appconfig) {
   var imagePath = 'img/logo_nontext.png',
   dummybts = [];
+  $scope.widebuttonstyle = {
+    "min-width":"500px"
+  }
   $scope.swipeTab = function(selectedtab){
     console.log("Geser ",selectedtab);
     $scope.apptab.selected = selectedtab;

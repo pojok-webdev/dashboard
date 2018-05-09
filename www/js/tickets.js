@@ -1,6 +1,9 @@
 app.controller('TicketCtrl', function($http,$scope,appconfig) {
   var imagePath = 'img/logo_nontext.png',
   dummysales = [];
+  $scope.widebuttonstyle = {
+    "min-width":"500px"
+  }
   $scope.swipeTab = function(selectedtab){
     console.log("Geser ",selectedtab);
     $scope.installtab.selected = selectedtab;

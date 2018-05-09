@@ -1,10 +1,13 @@
 app.controller('InstallCtrl', function($http,$scope,appconfig) {
   var imagePath = 'img/logo_nontext.png',
   dummysales = [];
+  $scope.widebuttonstyle = {
+    "min-width":"500px"
+  }
   $scope.swipeTab = function(selectedtab){
     console.log("Geser ",selectedtab);
     $scope.apptab.selected = selectedtab;
-  }  
+  }
   loadData = function(_url,callback){
     var _scope;
     $http({

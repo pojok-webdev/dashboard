@@ -10,6 +10,9 @@ app.controller('SalesCtrl', function($http,$scope,appconfig) {
     { name: 'Eka', val: 0 }
   ],
   dummysales = [];
+  $scope.widebuttonstyle = {
+    "min-width":"500px"
+  }
   $scope.swipeTab = function(selectedtab){
     console.log("Geser ",selectedtab);
     $scope.apptab.selected = selectedtab;
