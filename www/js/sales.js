@@ -10,6 +10,10 @@ app.controller('SalesCtrl', function($http,$scope,appconfig) {
     { name: 'Eka', val: 0 }
   ],
   dummysales = [];
+  $scope.swipeTab = function(selectedtab){
+    console.log("Geser ",selectedtab);
+    $scope.apptab.selected = selectedtab;
+  }  
   console.log("SERVER",appconfig.SERVER,"PORT",appconfig.PORT);
   loadData = function(_url,callback){
     var _scope;

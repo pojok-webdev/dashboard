@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="../css/test.css" />
 <div ng-cloak ng-controller="SalesCtrl">
   <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
+    <md-tabs md-dynamic-height md-border-bottom md-selected="apptab.selected">
       <md-tab label="visit">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-left="swipeTab(1)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
               <md-list-item ng-repeat="cat in visits" ng-click="doAction()">
                 <p class="md-primary"> {{ cat.name }} </p>
@@ -20,7 +20,7 @@
         </md-content>
       </md-tab>
       <md-tab label="penawaran">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-right="swipeTab(0)" md-swipe-left="swipeTab(2)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in offers" ng-click="doAction()">
               <p class="md-primary"> {{ cat.name }} </p>
@@ -37,7 +37,7 @@
       </md-content>
       </md-tab>
       <md-tab label="create fb baru">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-right="swipeTab(1)" md-swipe-left="swipeTab(3)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in newfbs" ng-click="doAction()">
               <p class="md-primary"> {{ cat.name }} </p>
@@ -54,7 +54,7 @@
       </md-content>
       </md-tab>
       <md-tab label="nominal penjualan">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-right="swipeTab(2)" md-swipe-left="swipeTab(4)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in sellings" ng-click="doAction()">
               <p class="md-primary"> {{ cat.name }} </p>

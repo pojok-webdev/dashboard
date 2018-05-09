@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="../css/test.css" />
 <div ng-cloak ng-controller="BtsCtrl">
   <md-content>
-    <md-tabs md-dynamic-height md-border-bottom>
+    <md-tabs md-dynamic-height md-border-bottom md-selected="apptab.selected">
       <md-tab label="lokasi">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-left="swipeTab(1)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
               <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
                 <p class="md-primary"> {{ cat.bts }} </p>
@@ -21,7 +21,7 @@
         </md-content>
       </md-tab>
       <md-tab label="cabang">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-right="swipeTab(0)" md-swipe-left="swipeTab(2)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
               <p class="md-primary"> {{ cat.bts }} </p>
@@ -38,7 +38,7 @@
       </md-content>
       </md-tab>
       <md-tab label="PTP Wireless">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-right="swipeTab(1)" md-swipe-left="swipeTab(3)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
               <p class="md-primary"> {{ cat.name }} </p>
@@ -55,7 +55,7 @@
       </md-content>
       </md-tab>
       <md-tab label="Jumlah AP">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-right="swipeTab(2)" md-swipe-left="swipeTab(4)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
               <p class="md-primary"> {{ cat.bts }} </p>
@@ -72,7 +72,7 @@
       </md-content>
       </md-tab>
       <md-tab label="Jumlah Pelanggan">
-        <md-content class="md-padding">
+        <md-content class="md-padding" md-swipe-right="swipeTab(3)" md-swipe-left="swipeTab(5)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
             <md-list-item ng-repeat="cat in bts" ng-click="doAction()">
               <p class="md-primary"> {{ cat.bts }} </p>

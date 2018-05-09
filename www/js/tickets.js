@@ -1,6 +1,10 @@
 app.controller('TicketCtrl', function($http,$scope,appconfig) {
   var imagePath = 'img/logo_nontext.png',
   dummysales = [];
+  $scope.swipeTab = function(selectedtab){
+    console.log("Geser ",selectedtab);
+    $scope.installtab.selected = selectedtab;
+  }
   loadData = function(_url,callback){
     var _scope;
     $http({
