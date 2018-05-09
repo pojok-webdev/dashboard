@@ -29,4 +29,5 @@
     <icon density="mdpi" height="57" platform="ios" src="www/img/logo_nontext.png" width="57" />
     <engine name="browser" spec="^5.0.3" />
     <engine name="android" spec="^7.0.0" />
+    <engine name="ios" spec="^4.5.4" />
 </widget>
