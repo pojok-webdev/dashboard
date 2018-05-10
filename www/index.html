@@ -23,7 +23,7 @@
         <section layout="row" flex>
           <md-sidenav class="md-sidenav-left" md-component-id="left"
                       md-disable-backdrop md-whiteframe="4">
-            <md-toolbar class="md-theme-indigo">
+            <md-toolbar class="md-theme-indigo" md-colors="::{backgroundColor: 'yellow'}">
               <h1 class="md-toolbar-tools" ng-click="toggleLeft()">PadiNET Dashboard</h1>
             </md-toolbar>
             <md-list ng-cloak>
@@ -57,7 +57,7 @@
             </md-content>
           </md-sidenav>
           <md-content flex layout-padding>
-            <md-toolbar class="md-hue-2">
+            <md-toolbar class="md-hue-2" md-colors="::{backgroundColor: 'yellow'}">
               <div class="md-toolbar-tools">
                 <h2 flex md-truncate>PadiNET Dashboard {{modulename | uppercase}} </h2>
                 <md-button class="md-icon-button" aria-label="More" ng-click="toggleLeft()" >
