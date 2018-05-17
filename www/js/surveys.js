@@ -1,4 +1,4 @@
-app.controller('SurveyCtrl', function($http,$scope,appconfig) {
+app.controller('SurveyCtrl', function($http,$scope,$location,appconfig) {
   var imagePath = 'img/logo_nontext.png',
   dummysales = [];
   $scope.widebuttonstyle = {
@@ -43,5 +43,9 @@ app.controller('SurveyCtrl', function($http,$scope,appconfig) {
     });
   $scope.doAction = function(event){
     console.log("Hehe");
+  }
+  $scope.showpage = function(location){
+    $location.path(location);
+    $scope.modulename = " ("+location+")";
   }
 })

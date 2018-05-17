@@ -5,7 +5,7 @@
       <md-tab label="hari">
         <md-content class="md-padding" md-swipe-left="swipeTab(1)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-              <md-list-item ng-repeat="cat in daily" ng-click="doAction()">
+              <md-list-item ng-repeat="cat in daily" ng-click="showpage('surveyDetails');">
                 <p class="md-primary"> {{ cat.name }} </p>
                 <p class="md-secondary"> {{ cat.val }} </p>
               </md-list-item>

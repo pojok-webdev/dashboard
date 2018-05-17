@@ -6,12 +6,14 @@ app.config(['$routeProvider','$locationProvider',function($routeProvider,$locati
     .when("/",{templateUrl:"pages/main.html"})
     .when("/tickets",{templateUrl:"./pages/tickets.html",controller: 'AppCtrl'})
     .when("/installs",{templateUrl:"pages/installs.html"})
-    .when("/sales",{templateUrl:"pages/sales.html"})
+    .when("/sales",{templateUrl:"pages/sales.html"})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     .when("/troubleshoots",{templateUrl:"pages/troubleshoots.html"})
     .when("/bts",{templateUrl:"pages/bts.html"})
     .when("/surveys",{templateUrl:"pages/surveys.html"})
-    .when("/test",{templateUrl:"pages/test.html"})
-    .when("/appsettings",{templateUrl:"pages/appsettings.html"});
+    .when("/test",{templateUrl:"pages/test.html"})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    .when("/appsettings",{templateUrl:"pages/appsettings.html"})
+    .when("/surveyDetails",{templateUrl:"pages/surveys/detail.html"})
+    ;
 }]);
 app.config(['$httpProvider', function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
@@ -28,10 +30,9 @@ app.controller("AppCtrl", function ($scope, $route, $routeParams, $location, $md
         return function() {
             $mdSidenav(componentId).toggle();
         };
-}
-$scope.showpage = function(location){
-    $location.path(location);
-    $scope.modulename = " ("+location+")";
-}
+    }
+    $scope.showpage = function(location){
+        $location.path(location);
+        $scope.modulename = " ("+location+")";
+    }
 });
-  
