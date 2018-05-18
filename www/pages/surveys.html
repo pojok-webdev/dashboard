@@ -5,7 +5,7 @@
       <md-tab label="hari">
         <md-content class="md-padding" md-swipe-left="swipeTab(1)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-              <md-list-item ng-repeat="cat in daily" ng-click="showpage('surveyDetails');">
+              <md-list-item ng-repeat="cat in daily" ng-click="showpage('surveyDetails','daily',cat.cat)">
                 <p class="md-primary"> {{ cat.name }} </p>
                 <p class="md-secondary"> {{ cat.val }} </p>
               </md-list-item>
@@ -23,7 +23,7 @@
       <md-tab label="pekan">
         <md-content class="md-padding" md-swipe-right="swipeTab(0)" md-swipe-left="swipeTab(2)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in weekly" ng-click="doAction()">
+            <md-list-item ng-repeat="cat in weekly" ng-click="showpage('surveyDetails','weekly',cat.cat)">
               <p class="md-primary"> {{ cat.name }} </p>
               <p class="md-secondary"> {{ cat.val }} </p>
             </md-list-item>
@@ -40,7 +40,7 @@
       <md-tab label="bulan">
         <md-content class="md-padding" md-swipe-right="swipeTab(1)" md-swipe-left="swipeTab(3)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in monthly" ng-click="doAction()">
+            <md-list-item ng-repeat="cat in monthly" ng-click="showpage('surveyDetails','monthly',cat.cat)">
               <p class="md-primary"> {{ cat.name }} </p>
               <p class="md-secondary"> {{ cat.val }} </p>
             </md-list-item>
@@ -57,7 +57,7 @@
       <md-tab label="quarter">
         <md-content class="md-padding" md-swipe-right="swipeTab(2)" md-swipe-left="swipeTab(4)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in quarterly" ng-click="doAction()">
+            <md-list-item ng-repeat="cat in quarterly" ng-click="showpage('surveyDetails','quarterly',cat.cat)">
               <p class="md-primary"> {{ cat.name }} </p>
               <p class="md-secondary"> {{ cat.val }} </p>
             </md-list-item>
@@ -74,7 +74,7 @@
       <md-tab label="tahun">
         <md-content class="md-padding" md-swipe-right="swipeTab(3)" md-swipe-left="swipeTab(5)">
           <md-list ng-cloak="" class="listdemoListControls" ng-app="MyApp">
-            <md-list-item ng-repeat="cat in yearly" ng-click="doAction()">
+            <md-list-item ng-repeat="cat in yearly" ng-click="showpage('surveyDetails','yearly',cat.cat)">
               <p class="md-primary"> {{ cat.name }} </p>
               <p class="md-secondary"> {{ cat.val }} </p>
             </md-list-item>

@@ -1,8 +1,11 @@
 <div ng-cloak ng-controller="SurveyDetailCtrl">
-    <h1>Detail Surveys</h1>
+    <h1><md-icon md-svg-icon="../../img/icons/up.svg"></md-icon> Detail Surveys</h1>
     <md-list>
-        <md-list-item ng-repeat="client in clients">
+        <md-list-item ng-repeat="client in detailsurvey">
+            <img src="../../img/sales/{{ client.sales }}.jpg" alt="{{ client.sales }}" class="md-avatar">
             <p>{{ client.name }}</p>
+            <p class="md-secondary">{{ client.address }}</p>
+            </md-icon>
         </md-list-item>
     </md-list>
 </div>

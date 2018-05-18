@@ -44,8 +44,8 @@ app.controller('SurveyCtrl', function($http,$scope,$location,appconfig) {
   $scope.doAction = function(event){
     console.log("Hehe");
   }
-  $scope.showpage = function(location){
-    $location.path(location);
+  $scope.showpage = function(location,period,category){
+    $location.path(location+'/'+period+'/'+category);
     $scope.modulename = " ("+location+")";
   }
 })
