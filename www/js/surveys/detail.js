@@ -1,4 +1,4 @@
-app.controller('SurveyDetailCtrl',function($scope,$routeParams,appconfig){
+app.controller('SurveyDetailCtrl',function($scope,$location,$routeParams,appconfig){
     var _SERVER = appconfig.SERVER+':'+appconfig.PORT;
     category = $routeParams.category;
     period = $routeParams.period;
@@ -6,9 +6,9 @@ app.controller('SurveyDetailCtrl',function($scope,$routeParams,appconfig){
     loadData('http://'+_SERVER+'/detailsurvey'+period+'/'+category,function(out){
         $scope.detailsurvey = out;
     });
-  
-    $scope.clients = [
-        {name:'Jamu Oebi, PT',address:'Jl Maynej Sungkono 83A',sales:"aris"},
-        {name:'Resto Nine, PT',address:'Jl Maynej Sungkono 83B',sales:"dhita"}
-    ]
+    $scope.showpage = function(location){
+        console.log("Goto",location);
+        $location.path(location);
+        $scope.modulename = " ("+location+")";
+    }
 })
