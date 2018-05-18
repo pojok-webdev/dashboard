@@ -1,7 +1,7 @@
 <div ng-cloak ng-controller="SurveyDetailCtrl">
     <md-content>
         <md-list flex>
-            <md-list-item class="md-3-line" ng-repeat="client in detailsurvey">
+            <md-list-item class="md-3-line" ng-repeat="client in detailsurvey" ng-click="null">
                 <img ng-src="../../img/icons/baseline-face-24px.svg" class="md-avatar" alt="sales" />
                 <div class="md-list-item-text" layout="column">
                     <h3>{{ client.sales }}</h3>
